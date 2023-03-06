@@ -13,7 +13,7 @@ services:
       - geoglyph-mysql
     ports:
       - 8888:8000
-    command: bash -c "uvicorn main:app --reload --host '0.0.0.0' --port 8000"
+    command: bash -c "uvicorn api.main:app --reload --host '0.0.0.0' --port 8000"
   geoglyph-mysql:
     image: mysql:8.0
     environment:
